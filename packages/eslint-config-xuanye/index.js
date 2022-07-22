@@ -5,6 +5,7 @@ module.exports = {
     es2021: true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb', 'airbnb/hooks', 'prettier'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -12,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'import', 'jsx-a11y'],
+  plugins: ['react', '@typescript-eslint', 'import', 'jsx-a11y'],
   rules: {
     indent: ['error', 2, { SwitchCase: 1 }],
     'linebreak-style': 1,
@@ -33,6 +34,17 @@ module.exports = {
         required: {
           some: ['nesting', 'id'],
         },
+      },
+    ],
+    'react/jsx-filename-extension': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
     ],
   },

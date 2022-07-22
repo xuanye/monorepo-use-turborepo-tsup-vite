@@ -1,0 +1,4 @@
+{
+  "extends": "ts-config-xuanye/tsconfig.node.json",
+  "include": ["vite.config.ts"]
+}

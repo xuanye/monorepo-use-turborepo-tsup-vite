@@ -1,0 +1,5 @@
+{
+  "extends": "ts-config-xuanye/tsconfig.json",
+  "include": ["./stories"],
+  "exclude": ["dist", "build", "node_modules"]
+}
